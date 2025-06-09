@@ -73,22 +73,23 @@ body {
 }
 
 .foto-perfil {
-    width: 350px;
-    height: 350px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%; /* Para ficar arredondado*/
     border: 4px solid var(--vidro);
     box-shadow: 0 0 20px rgba(79,70,229,0.3); /*Para deixar esfumaçado o fundo*/
+    animation: flutuar 5s ease-in-out infinite; /*Para deixar a foto flutuar*/
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     color: var(--primaria);
     font-weight: bold;
     margin: 20px;
 }
 
 .cabecalho-sub-titulo {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: var(--claro);
 }
 
@@ -97,7 +98,7 @@ h1 {
 }
 
 .sobre-titulo{
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--claro);
     text-align: center;
     margin-bottom: 20px;
@@ -228,6 +229,29 @@ h1 {
 .botao-form:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(79,70,229,0.3); /*Para deixar esfumaçado o fundo*/
+}
+
+.particulas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /*Para ficar atrás de tudo*/
+    opacity: 0.5; /*Para deixar as partículas mais transparentes*/
+    background: 
+    radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
+    var(--maisEscuro);
+}
+
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 

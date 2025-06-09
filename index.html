@@ -8,6 +8,10 @@
     <title>Portifolio Renan</title>
 </head>
 
+<div class="particulas">
+
+</div>
+
 <body>
     <nav class="navegacao">
         <ul class="menu">
@@ -40,9 +44,19 @@
     <section id="sobre" class="sobre">
         <h2 class="sobre-titulo">Sobre mim</h2>
         <div class="sobre-caixa">
-            <p class="sobre-paragrafo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum et quam cumque
-                veniam accusamus repellendus recusandae alias libero dignissimos. Minus assumenda maiores explicabo
-                beatae tenetur cum maxime laboriosam quidem! Facere! </p>
+            <p class="sobre-paragrafo">Olá, meu nome é Renan.
+                Atualmente estou no 4º ano do curso de Engenharia de Software no Instituto Federal do Paraná – Campus
+                Paranavaí. Desde criança, sempre fui apaixonado por tecnologia, o que despertou em mim o desejo de
+                seguir carreira nessa área.
+                
+                Sou uma pessoa curiosa, dedicada e motivada por desafios. Estou constantemente em busca de novos
+                aprendizados e oportunidades que me permitam crescer tanto pessoal quanto profissionalmente. Acredito
+                que o conhecimento é um pilar essencial para o sucesso, e por isso me esforço para absorver o máximo
+                possível em cada experiência.
+
+                Meu objetivo é atuar em projetos que me permitam aplicar minhas habilidades, colaborar com equipes
+                inovadoras e continuar evoluindo como profissional na área de tecnologia.
+            </p>
         </div>
     </section>
 
@@ -77,20 +91,36 @@
 
     <section id="contato" class="contatos">
         <h2 class="contatos-titulo">Entre em Contato</h2>
-        <form class="formulario-contato" id="formulario">
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
             <div class="grupo-form">
-                <input placeholder="Nome" class="campo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
             </div>
 
             <div class="grupo-form">
-                <textarea class="campo-form" placeholder="Digite a sua Mensagem"></textarea>
+                <textarea class="campo-form" placeholder="Digite a sua Mensagem" id="mensagem"></textarea>
             </div>
 
             <button type="submit" class="botao-form">Enviar WhatsApp</button>
         </form>
     </section>
 
+    <script>
 
+        function enviarWhats(event) {
+            event.preventDefault(); // Impede que a tela recarregue ao enviar o formulário
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem');
+            const telefone = '5544998344855'; //número de telefone
+
+            const texto = `Olá, meu nome é ${nome.value}, ${mensagem.value}`;
+            const msgFormatada = encodeURIComponent(texto)
+            const url = `https://api.whatsapp.com/send?phone=${telefone}&text=${msgFormatada}`;
+
+            window.open(url, '_blank'); /*_blank abre em uma pagina em branco*/
+        }
+
+    </script>
 </body>
 
 </html>
