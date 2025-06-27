@@ -23,6 +23,25 @@ html {
     /* Cor de Vidro */
 }
 
+/* Tema Claro */
+[data-theme="light"] {
+    --primaria: #4f46e5;
+    --secundaria: #7c3aed;
+    --escuro: #ffffff;
+    --maisEscuro: #f8fafc;
+    --claro: #1e293b;
+    --vidro: rgba(0, 0, 0, 0.1);
+}
+
+/* Tema Escuro (padrão) */
+[data-theme="dark"] {
+    --primaria: #4f46e5;
+    --secundaria: #7c3aed;
+    --escuro: #0f172a;
+    --maisEscuro: #0a0f1c;
+    --claro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0.1);
+}
 
 body {
     background-color: var(--escuro);
@@ -462,4 +481,73 @@ h1 {
     color: rgba(226, 232, 240, 0.8);
     line-height: 1.5;
     font-size: 0.9rem;
+}
+
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: var(--claro);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+}
+
+.theme-toggle i {
+    transition: all 0.3s ease;
+}
+
+/* Animação de rotação do ícone */
+.theme-toggle.rotating i {
+    transform: rotate(360deg);
+}
+
+
+/* Ajustes para o tema claro */
+[data-theme="light"] .navegacao {
+    background: rgba(248, 250, 252, 0.95);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .sobre-caixa,
+[data-theme="light"] .projetos-card,
+[data-theme="light"] .formulario-contato,
+[data-theme="light"] .habilidade-card {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .theme-toggle {
+    background: rgba(0, 0, 0, 0.1);
+    color: var(--claro);
+}
+
+[data-theme="light"] .theme-toggle:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="light"] .particulas {
+    background:
+        radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
+        var(--escuro);
+    opacity: 0.3;
 }

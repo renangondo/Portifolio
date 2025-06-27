@@ -130,3 +130,72 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+// Função para alternar tema
+function toggleTheme() {
+    const body = document.body;
+    const themeIcon = document.getElementById('theme-icon');
+    const themeToggle = document.querySelector('.theme-toggle');
+    
+    // Adiciona animação de rotação
+    themeToggle.classList.add('rotating');
+    
+    // Remove a animação após completar
+    setTimeout(() => {
+        themeToggle.classList.remove('rotating');
+    }, 300);
+    
+    // Verifica o tema atual
+    const currentTheme = body.getAttribute('data-theme');
+    
+    if (currentTheme === 'light') {
+        // Muda para tema escuro
+        body.setAttribute('data-theme', 'dark');
+        themeIcon.className = 'fas fa-sun';
+        localStorage.setItem('theme', 'dark');
+    } else {
+        // Muda para tema claro
+        body.setAttribute('data-theme', 'light');
+        themeIcon.className = 'fas fa-moon';
+        localStorage.setItem('theme', 'light');
+    }
+}
+
+// Carrega o tema salvo ao inicializar a página
+function loadTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    const body = document.body;
+    const themeIcon = document.getElementById('theme-icon');
+    
+    body.setAttribute('data-theme', savedTheme);
+    
+    if (savedTheme === 'light') {
+        themeIcon.className = 'fas fa-moon';
+    } else {
+        themeIcon.className = 'fas fa-sun';
+    }
+}
+
+// Inicializa o tema quando a página carrega
+document.addEventListener('DOMContentLoaded', function() {
+    loadTheme();
+});
+
+// Função do WhatsApp (mantendo a existente)
+function enviarWhats(event) {
+    event.preventDefault();
+    
+    const nome = document.getElementById('nome').value;
+    const mensagem = document.getElementById('mensagem').value;
+    const telefone = '5544998344855';
+
+    const texto = `Olá, meu nome é ${nome}, ${mensagem}`;
+    const msgFormatada = encodeURIComponent(texto);
+    const url = `https://api.whatsapp.com/send?phone=${telefone}&text=${msgFormatada}`;
+
+    window.open(url, '_blank');
+    
+    // Limpar formulário
+    document.getElementById('nome').value = '';
+    document.getElementById('mensagem').value = '';
+}
