@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,16 +6,21 @@
 }
 
 html {
-    scroll-behavior: smooth;  /*Movimento do Scroll*/
+    scroll-behavior: smooth;
+    /*Movimento do Scroll*/
 }
 
 :root {
-     --primaria: #4f46e5; /* Cor Primária */
-     --secundaria: #7c3aed; /* Cor Secundária */
-     --escuro: #0f172a;
-     --maisEscuro: #0a0f1c; /* Cor Mais Escura */
-     --claro: #e2e8f0;
-     --vidro: rgba(255, 255, 255, 0.1); /* Cor de Vidro */
+    --primaria: #4f46e5;
+    /* Cor Primária */
+    --secundaria: #7c3aed;
+    /* Cor Secundária */
+    --escuro: #0f172a;
+    --maisEscuro: #0a0f1c;
+    /* Cor Mais Escura */
+    --claro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0.1);
+    /* Cor de Vidro */
 }
 
 
@@ -27,13 +32,13 @@ body {
 .navegacao {
     position: fixed;
     top: 0;
-    background: rgba(15,23,42, 0.8);
+    background: rgba(15, 23, 42, 0.8);
     width: 100%;
     z-index: 100;
     padding: 1.5rem;
 }
 
-.menu{
+.menu {
     display: flex;
     justify-content: center;
     list-style: none;
@@ -49,7 +54,7 @@ body {
     padding: 0.5rem;
 }
 
-.menu-link::after{
+.menu-link::after {
     content: '';
     height: 2px;
     width: 0;
@@ -69,16 +74,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column ;
+    flex-direction: column;
 }
 
 .foto-perfil {
     width: 500px;
     height: 500px;
-    border-radius: 50%; /* Para ficar arredondado*/
+    border-radius: 50%;
+    /* Para ficar arredondado*/
     border: 4px solid var(--vidro);
-    box-shadow: 0 0 20px rgba(79,70,229,0.3); /*Para deixar esfumaçado o fundo*/
-    animation: flutuar 5s ease-in-out infinite; /*Para deixar a foto flutuar*/
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+    /*Para deixar esfumaçado o fundo*/
+    animation: flutuar 5s ease-in-out infinite;
+    /*Para deixar a foto flutuar*/
 }
 
 h1 {
@@ -93,25 +101,27 @@ h1 {
     color: var(--claro);
 }
 
-.sobre{
+.sobre {
     padding: 6rem 2rem;
 }
 
-.sobre-titulo{
+.sobre-titulo {
     font-size: 4rem;
     color: var(--claro);
     text-align: center;
     margin-bottom: 20px;
 }
 
-.sobre-caixa{
+.sobre-caixa {
     padding: 2rem;
     max-width: 700px;
-    margin: 0 auto; /*Para centrar alguma coisa*/
+    margin: 0 auto;
     border-radius: 16px;
     border: 1px solid var(--vidro);
-    backdrop-filter: blur(10px); /*Para deixar o fundo desfocado*/
-    background: rgba(255,255,255, 0.05); /*Para deixar o fundo transparente*/
+    backdrop-filter: blur(10px);
+    /*Para deixar o fundo desfocado*/
+    background: rgba(255, 255, 255, 0.05);
+    /*Para deixar o fundo transparente*/
 }
 
 .sobre-paragrafo {
@@ -139,24 +149,24 @@ h1 {
 }
 
 .projetos-card {
-    background: rgba(255,255,255, 0.05); /*Para deixar o fundo transparente*/
+    background: rgba(255, 255, 255, 0.05);/*Para deixar o fundo transparente*/
     border-radius: 20px;
-    backdrop-filter: blur(5px); /*Para deixar o fundo desfocado*/
+    backdrop-filter: blur(5px);/*Para deixar o fundo desfocado*/
     border: 1px solid var(--vidro);
-    overflow: hidden; /*Para esconder o que passar do card*/
+    overflow: hidden;/*Para esconder o que passar do card*/
     transition: all 0.3s ease;
-    cursor: pointer; /*Para deixar o cursor de mãozinha*/
+    cursor: pointer;/*Para deixar o cursor de mãozinha*/
 }
 
-.projetos-card:hover{
-    box-shadow: 0 10 20px rgba(79,70,229,0.3); /*Para deixar esfumaçado o fundo*/
-    transform: translateY(-10px) scale(1.03); /*Para deixar o título subir um pouco*/
-}   
+.projetos-card:hover {
+    box-shadow: 0 10 20px rgba(79, 70, 229, 0.3);/*Para deixar esfumaçado o fundo*/
+    transform: translateY(-10px) scale(1.03);/*Para deixar o título subir um pouco*/
+}
 
 .projetos-imagem {
     height: 200px;
     width: 100%;
-    object-fit: cover; /*Para cobrir todo o espaço*/
+    object-fit: cover;/*Para cobrir todo o espaço*/
 }
 
 .caixa-textos-projeto {
@@ -169,13 +179,13 @@ h1 {
 
 .paragrafo-projetos {
     color: rgba(226, 232, 240, 0.8);
-    line-height: 1.5rem; /*Para deixar o espaçamento entre as linhas*/
+    line-height: 1.5rem;/*Para deixar o espaçamento entre as linhas*/
 
 }
 
 .contatos {
     padding: 6rem 2rem;
-    
+
 }
 
 .contatos-titulo {
@@ -186,9 +196,9 @@ h1 {
 
 .formulario-contato {
     max-width: 600px;
-    margin: 0 auto; /*Para centralizar o formulário*/
-    background: rgba(255,255,255, 0.05);
-    backdrop-filter: blur(5px); /*Para deixar o fundo desfocado*/
+    margin: 0 auto;/*Para centralizar o formulário*/
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);/*Para deixar o fundo desfocado*/
     padding: 2rem;
     border: 1px solid var(--vidro);
     border-radius: 20px;
@@ -198,20 +208,20 @@ h1 {
 .campo-form {
     width: 100%;
     padding: 1rem;
-    background: rgba(255,255,255, 0.05);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
     color: var(--claro);
     border: 1px solid var(--vidro);
-    outline: none; /*Para tirar o contorno do input*/
+    outline: none;/*Para tirar o contorno do input*/
 }
 
 .campo-form:focus {
-    border-color: var(--secundaria); /*Para deixar a borda azul quando o input estiver focado*/
-    box-shadow: 0 0 10px rgba(79,70,229,0.5); /*Para deixar o fundo esfumaçado quando o input estiver focado*/
+    border-color: var(--secundaria);/*Para deixar a borda azul quando o input estiver focado*/
+    box-shadow: 0 0 10px rgba(79, 70, 229, 0.5);/*Para deixar o fundo esfumaçado quando o input estiver focado*/
 }
 
 .grupo-form {
-    margin-bottom: 1.5rem; /*Para deixar um espaçamento entre os campos*/
+    margin-bottom: 1.5rem;/*Para deixar um espaçamento entre os campos*/
 }
 
 .botao-form {
@@ -228,7 +238,7 @@ h1 {
 
 .botao-form:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(79,70,229,0.3); /*Para deixar esfumaçado o fundo*/
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3); /*Para deixar esfumaçado o fundo*/
 }
 
 .particulas {
@@ -237,12 +247,12 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /*Para ficar atrás de tudo*/
+    z-index: -1;  /*Para ficar atrás de tudo*/
     opacity: 0.5; /*Para deixar as partículas mais transparentes*/
-    background: 
-    radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
-    radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
-    var(--maisEscuro);
+    background:
+        radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
+        var(--maisEscuro);
 }
 
 .portfolio-footer {
@@ -284,9 +294,12 @@ h1 {
 }
 
 @keyframes flutuar {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-20px);
     }
@@ -294,11 +307,27 @@ h1 {
 
 
 /*RESPONSIVIDADE*/
-
 @media screen and (max-width: 768px) {
+    .navegacao {
+        position: fixed;
+        top: 0;
+        background: rgba(15, 23, 42, 0.95);
+        width: 100%;
+        z-index: 100;
+        padding: 0.8rem;
+    }
+
     .menu {
-        display: none; /* Esconde o menu em telas pequenas */
-        gap: 1rem;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 1.5rem; 
+        
+    }
+
+    .menu-link {
+        font-size: 0.9rem; 
+        padding: 0.3rem 0.6rem; 
     }
 
     .foto-perfil {
@@ -308,6 +337,7 @@ h1 {
 
     .cabecalho {
         min-height: 70vh;
+        padding-top: 100px; 
     }
 
     h1 {
@@ -318,33 +348,118 @@ h1 {
         font-size: 1.5rem;
     }
 
-    .sobre-titulo, .projetos-titulo, .contatos-titulo {
+    .sobre-titulo,
+    .projetos-titulo,
+    .contatos-titulo,
+    .habilidades-titulo {
         font-size: 2rem;
     }
 
     .projetos-card {
         transform: scale(0.9);
     }
-    
+
+    .habilidades-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .habilidade-card {
+        padding: 1.5rem;
+    }
+
+    .habilidade-icone {
+        font-size: 2.5rem;
+    }
+
+    .habilidade-nome {
+        font-size: 1.3rem;
+    }
+
+    .habilidade-descricao {
+        font-size: 0.85rem;
+    }
 }
 
 
-/*Estilização do menu mobile*/
+@media screen and (max-width: 480px) {
+    .menu {
+        gap: 1rem; 
+        padding: 0 0.5rem;
+    }
 
-.menu-mobile {
-    display: none; /* Esconde o menu mobile por padrão */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(15,23,42, 0.9);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 200; /* Para ficar acima do conteúdo */
+    .menu-link {
+        font-size: 0.8rem; 
+        padding: 0.2rem 0.4rem;
+    }
+
+    .navegacao {
+        padding: 0.5rem;
+    }
+
+    .cabecalho {
+        padding-top: 80px;
+    }
+}
+/* Estilização da seção de habilidades */
+.habilidades {
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, var(--escuro) 0%, var(--maisEscuro) 100%);
 }
 
+.habilidades-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--claro);
+}
 
+.habilidades-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+.habilidade-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
 
+.habilidade-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 30px rgba(79, 70, 229, 0.3);
+    border-color: var(--primaria);
+}
+
+.habilidade-icone {
+    font-size: 3rem;
+    color: var(--primaria);
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.habilidade-card:hover .habilidade-icone {
+    color: var(--secundaria);
+    transform: scale(1.1);
+}
+
+.habilidade-nome {
+    font-size: 1.5rem;
+    color: var(--claro);
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.habilidade-descricao {
+    color: rgba(226, 232, 240, 0.8);
+    line-height: 1.5;
+    font-size: 0.9rem;
+}

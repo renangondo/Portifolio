@@ -25,38 +25,19 @@
             </li>
 
             <li>
+                <a href="#habilidades" class="menu-link">Habilidades</a>
+            </li>
 
+            <li>
                 <a href="#projetos" class="menu-link">Projetos</a>
             </li>
 
             <li>
-
                 <a href="#contato" class="menu-link">Contato</a>
             </li>
         </ul>
     </nav>
-
-    <nav class="navegacao">
-        <ul class="menu-mobile">
-            <li>
-                <a href="#inicio" class="menu-link">Inicio</a>
-            </li>
-
-            <li>
-                <a href="#sobre" class="menu-link">Sobre</a>
-            </li>
-
-            <li>
-
-                <a href="#projetos" class="menu-link">Projetos</a>
-            </li>
-
-            <li>
-
-                <a href="#contato" class="menu-link">Contato</a>
-            </li>
-        </ul>
-    </nav>
+ 
 
     <main id="inicio" class="cabecalho">
         <img src="img/imagemPerfil.png" alt="Foto de perfil" class="foto-perfil">
@@ -71,7 +52,7 @@
                 Atualmente estou no 4º ano do curso de Engenharia de Software no Instituto Federal do Paraná – Campus
                 Paranavaí. Desde criança, sempre fui apaixonado por tecnologia, o que despertou em mim o desejo de
                 seguir carreira nessa área.
-                
+
                 Sou uma pessoa curiosa, dedicada e motivada por desafios. Estou constantemente em busca de novos
                 aprendizados e oportunidades que me permitam crescer tanto pessoal quanto profissionalmente. Acredito
                 que o conhecimento é um pilar essencial para o sucesso, e por isso me esforço para absorver o máximo
@@ -80,6 +61,54 @@
                 Meu objetivo é atuar em projetos que me permitam aplicar minhas habilidades, colaborar com equipes
                 inovadoras e continuar evoluindo como profissional na área de tecnologia.
             </p>
+        </div>
+    </section>
+
+
+    <section id="habilidades" class="habilidades">
+        <h2 class="habilidades-titulo">Minhas Habilidades</h2>
+        <div class="habilidades-container">
+            <div class="habilidade-card">
+                <i class="fab fa-html5 habilidade-icone"></i>
+                <h3 class="habilidade-nome">HTML</h3>
+                <p class="habilidade-descricao">Estruturação e marcação de páginas web com semântica adequada</p>
+            </div>
+
+            <div class="habilidade-card">
+                <i class="fab fa-css3-alt habilidade-icone"></i>
+                <h3 class="habilidade-nome">CSS</h3>
+                <p class="habilidade-descricao">Estilização avançada, flexbox, grid e animações responsivas</p>
+            </div>
+
+            <div class="habilidade-card">
+                <i class="fab fa-js-square habilidade-icone"></i>
+                <h3 class="habilidade-nome">JavaScript</h3>
+                <p class="habilidade-descricao">Desenvolvimento interativo e dinâmico para aplicações web</p>
+            </div>
+
+            <div class="habilidade-card">
+                <i class="fab fa-python habilidade-icone"></i>
+                <h3 class="habilidade-nome">Python</h3>
+                <p class="habilidade-descricao">Programação backend, automação e desenvolvimento de APIs</p>
+            </div>
+
+            <div class="habilidade-card">
+                <i class="fab fa-python habilidade-icone"></i>
+                <h3 class="habilidade-nome">Django</h3>
+                <p class="habilidade-descricao">Framework web para desenvolvimento rápido e seguro</p>
+            </div>
+
+            <div class="habilidade-card">
+                <i class="fab fa-github habilidade-icone"></i>
+                <h3 class="habilidade-nome">GitHub</h3>
+                <p class="habilidade-descricao">Controle de versão e colaboração em projetos de desenvolvimento</p>
+            </div>
+
+            <div class="habilidade-card">
+                <i class="fas fa-database habilidade-icone"></i>
+                <h3 class="habilidade-nome">SQL</h3>
+                <p class="habilidade-descricao">Gerenciamento e consulta de bancos de dados relacionais</p>
+            </div>
         </div>
     </section>
 
@@ -127,40 +156,46 @@
         </form>
     </section>
 
-   <footer class="portfolio-footer">
-    <div class="social-icons">
-        <a href="https://www.facebook.com/renan.gondo/" target="_blank" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://github.com/renangondo" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.instagram.com/renan_gondo/" target="_blank" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://linkedin.com/in/seuuser" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-        </a>
-    </div>
-    <p class="copyright">© 2025 Renan Gondo. Todos os direitos reservados.</p>
-</footer>
+    <footer class="portfolio-footer">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/renan.gondo/" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://github.com/renangondo" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/renan_gondo/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/renan-gondo-a137a02b7/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+        <p class="copyright">© 2025 Renan Gondo. Todos os direitos reservados.</p>
+    </footer>
 
+    <script src="script.js"></script>
     <script>
-
-        function enviarWhats(event) {
-            event.preventDefault(); // Impede que a tela recarregue ao enviar o formulário
-
-            const nome = document.getElementById('nome').value;
-            const mensagem = document.getElementById('mensagem');
-            const telefone = '5544998344855'; //número de telefone
-
-            const texto = `Olá, meu nome é ${nome.value}, ${mensagem.value}`;
-            const msgFormatada = encodeURIComponent(texto)
-            const url = `https://api.whatsapp.com/send?phone=${telefone}&text=${msgFormatada}`;
-
-            window.open(url, '_blank'); /*_blank abre em uma pagina em branco*/
-        }
-
+        // Script de teste inline
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM carregado');
+            
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.menu-mobile');
+            
+            console.log('Hamburger encontrado:', hamburger);
+            console.log('Menu mobile encontrado:', mobileMenu);
+            
+            if (hamburger) {
+                hamburger.addEventListener('click', function() {
+                    console.log('Hamburger clicado!');
+                    if (mobileMenu) {
+                        mobileMenu.classList.toggle('active');
+                        console.log('Menu active:', mobileMenu.classList.contains('active'));
+                    }
+                });
+            }
+        });
     </script>
 </body>
 
